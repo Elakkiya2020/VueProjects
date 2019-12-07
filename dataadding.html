@@ -1,0 +1,30 @@
+  <html>
+    <head>
+        <title> VueJs Adding Data Demo</title>
+        <script type = "text/javascript" src = "vue.js"></script>
+    </head>
+</html> 
+<body>
+    <div id="app"> 
+        <h3>Adding multiple properties</h3>
+        <h3>Accessing property which is not added to reactivity system</h3>         
+        <hr>
+        <h3> Employee Details</h3>                   
+        Employee Name:{{ename}}<br/>
+        Employee ID:{{eId}}<br/>
+        Employee Unit:{{unit}}<br/>
+        Employee Location:{{location}}<br/>
+    </div>
+    <script type="text/javascript">
+    var empDetails ={ ename:'Saveswaran' ,eId: 12345, unit: 'Machine Learning'  }
+
+    var app = new Vue({
+
+        el: "#app",
+        data: empDetails
+
+    });
+    app.location = "Chidambaram";
+    console.log("Current Location:", app.location);
+    </script>
+</body>
